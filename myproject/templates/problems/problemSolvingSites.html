@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/database.css' %}"> 
+<h1>Here you will find some problem solving sites</h1>
+{% if data %}
+  <h2>Yes data base contains data</h2>
+  <table>
+     <tr>
+        <th>Id</th>
+        <th>Judge Name</th>
+        <th>Total problems</th>
+        <th>user_handle</th>
+     </tr>
+     {% for data in data %}
+       <tr>
+        <td>{{data.id}}</td>
+        <td>{{data.judge_name}}</td>
+        <td>{{data.total_problem}}</td>
+        <td>{{data.handle_name}}</td>
+       </tr>
+     {% endfor %}
+  </table>
+{% else %}
+<h2>No data found!!!</h2>
+{% endif %}

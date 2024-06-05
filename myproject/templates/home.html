@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/style2.css' %}"> 
+{% endblock style %}
+
+{% block content %}
+<header class="hero-section">
+    <div class="container">
+      <h1>Welcome to MyWebsite</h1>
+      <p>Your one-stop solution for coding problems and solutions.</p>
+      <a href="solutions.html" class="btn">Explore Solutions</a>
+    </div>
+  </header>
+  <div class="container">
+    <section class="about">
+      <h2>About Us</h2>
+      <p>At MyWebsite, we aim to provide a comprehensive platform for coding enthusiasts to practice and enhance their problem-solving skills. With a wide range of problems and detailed solutions, we help you become a better programmer.</p>
+    </section>
+    <section class="features">
+      <h2>Features</h2>
+      <div class="feature">
+        <h3>Wide Range of Problems</h3>
+        <p>Explore problems across various domains and difficulty levels, curated to challenge and enhance your skills.</p>
+      </div>
+      <div class="feature">
+        <h3>Detailed Solutions</h3>
+        <p>Each problem comes with a step-by-step solution, helping you understand the underlying concepts and approaches.</p>
+      </div>
+      <div class="feature">
+        <h3>Community Support</h3>
+        <p>Join our community of learners and get support, share ideas, and collaborate on projects.</p>
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 MyWebsite. All rights reserved.</p>
+    </div>
+  </footer>
+  
+{% endblock content %}
