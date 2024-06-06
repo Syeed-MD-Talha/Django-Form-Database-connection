@@ -17,10 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from HomePage.views import homepage
-from Problems.views import problemSet
 from contact.views import contact
 from solution.views import solution
 from SignUp.views import SignUp
+
 
 
 urlpatterns = [
@@ -28,6 +28,7 @@ urlpatterns = [
     path('problems/',include('Problems.urls')),
     path('contact/',contact,name='contact'),
     path('solution/',solution,name='solution'),
-    path('SignUp/',SignUp,name='signup'),
+    path('signup/',SignUp,name='signup'),
+    path('',include('LogIn.urls')),
     path('admin/', admin.site.urls),
 ]

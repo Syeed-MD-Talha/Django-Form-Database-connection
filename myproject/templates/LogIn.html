@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <style>
+        form {
+            width: 20%;
+            margin: auto;
+            background-color: rgba(238, 130, 238, 0.737);
+            padding: 5%;
+            font-size: 30px;
+        }
+        form input, button {
+            padding: 2%;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        #signup{border: 2px solid black;font-size: 18px;padding: 2%;}
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">This is Login Page</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        
+        {% if form.non_field_errors %}
+            <div class="error">
+                {% for error in form.non_field_errors %}
+                    {{ error }}
+                {% endfor %}
+            </div>
+        {% endif %}
+        
+        {% for field in form %}
+            <div>
+                {{ field.label_tag }} {{ field }}
+                {% if field.errors %}
+                    <div class="error">
+                        {% for error in field.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                <br><br>
+            </div>
+        {% endfor %}
+        <button type="submit">LogIn</button>
+        <a id="signup" href="{% url 'signup' %}">SignUp</a>
+    </form>
+</body>
+</html>
