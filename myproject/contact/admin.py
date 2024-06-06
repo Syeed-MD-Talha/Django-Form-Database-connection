@@ -4,5 +4,6 @@ from .models import ContactUs
 
 class ContactAdmin(admin.ModelAdmin):
     list_display=('id','name','email','message')
+    ordering=('id',)
 
 admin.site.register(ContactUs,ContactAdmin)

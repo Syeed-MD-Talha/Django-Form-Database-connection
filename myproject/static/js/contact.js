@@ -3,6 +3,7 @@ document.querySelector('.submit').addEventListener(
     ()=>{
         console.log("hello")
         alert('Form has been submitted successfully !!')
+        
     }
 );
 

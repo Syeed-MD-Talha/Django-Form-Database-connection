@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'Problems',
     'contact',
     'solution',
+    'SignUp',
 ]
 
 MIDDLEWARE = [
